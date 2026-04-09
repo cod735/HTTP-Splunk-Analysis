@@ -5,24 +5,15 @@ HTTP (Hypertext Transfer Protocol) logs provide detailed information about web t
 
 This project focuses on analyzing HTTP log data using Splunk SIEM to identify patterns, detect anomalies, and perform basic threat hunting.
 
+### Splunk Data Search Interface
+![Splunk HTTP Data](screenshots/http-search.png)
+
 ## Objectives
 - Ingest HTTP log data into Splunk
 - Extract and analyze important fields
 - Understand web traffic behavior
 - Detect anomalies and suspicious activity
 - Document findings in a structured report
-
-## Project Structure
-HTTP-Splunk-Analysis/
-\u2502
-\u251c\u2500\u2500 README.md
-\u251c\u2500\u2500 data/
-\u251c\u2500\u2500 screenshots/
-\u251c\u2500\u2500 queries/
-\u2502 \u2514\u2500\u2500 splunk_queries.txt
-\u2514\u2500\u2500 report/
-\u2514\u2500\u2500 analysis_report.md
-
 
 ## Data Source
 Sample HTTP log data is used for analysis. The dataset contains HTTP requests, response codes, URLs, and user-agent information.
@@ -39,4 +30,12 @@ Sample HTTP log data is used for analysis. The dataset contains HTTP requests, r
 5. Document findings in the report
 
 ## Status
-Project initialized. Data ingestion and analysis in progress.
+## Project Status
+
+Completed:
+- HTTP log ingestion into Splunk
+- Field extraction (src_ip, dst_ip, method, status, URI)
+- Traffic analysis (methods, URLs, status codes)
+- Detection of suspicious activity (DirBuster web enumeration)
+- Documentation of findings with evidence
+
