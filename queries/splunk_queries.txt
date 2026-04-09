@@ -1,0 +1,13 @@
+source="http.log.gz" host="abbaskhan-VMware-Virtual-Platform" sourcetype="httplogs"
+
+source="http.log.gz" host="abbaskhan-VMware-Virtual-Platform" sourcetype="httplogs"| src_ip,src_port,dst_ip,dst_port,method,
+
+index=_* OR index=* sourcetype=httplogs | table src_ip,src_port, dst_ip,dst_port | dedup src_ip,dst_ip
+
+
+index=_* OR index=* sourcetype=httplogs dst_ip="192.168.229.101" | top limit=10 src_ip
+
+index=_* OR index=* sourcetype=httplogs | stats count by status | where stats>=400
+
+index=_* OR index=* sourcetype=httplogs | search action="login" status="failed"
+| stats count by user
